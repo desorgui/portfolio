@@ -1,3 +1,32 @@
-.brand {
+body {
+  background-color: #f8f8f8;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+
+header .brand {
   font-size: 25px;
+}
+
+header .nav-menu ul {
+  display: flex;
+}
+
+header .nav-menu ul li {
+  list-style: none;
+  padding-left: 30px;
+}
+
+header .nav-menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
 }
