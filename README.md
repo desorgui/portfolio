@@ -34,7 +34,7 @@ Run `npx stylelint "**/*.{css,scss}"`
 
 #### Usage
 
-Open The folder in your file explorer then, right click on index.html and open with your browser
+Open The folder in your file explorer then, right click on index.html and open with your browser.
 
 ## Authors
 

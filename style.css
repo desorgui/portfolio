@@ -7,6 +7,7 @@ body {
   padding: 0;
   color: #f8f8f8;
   overflow-x: hidden;
+  max-width: 1400px;
 }
 
 header {
@@ -175,7 +176,8 @@ header .nav-menu ul li a:hover {
 
   .headline .image {
     top: 500px;
-    left: 550px;
+    left: 0;
+    right: 0;
     order: 2;
   }
 }
