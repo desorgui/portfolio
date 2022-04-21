@@ -1,18 +1,26 @@
+@import 'https://fonts.googleapis.com/css?family=Crete Round|Inter';
+
 body {
-  background-color: #f8f8f8;
+  background-color: #111;
   width: 100%;
   margin: 0;
   padding: 0;
+  color: #f8f8f8;
+  overflow-x: hidden;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 100px;
+  align-items: baseline;
+  padding: 7px 100px;
+  background-color: #444;
 }
 
-header .brand {
+header .brand a {
   font-size: 25px;
+  text-decoration: none;
+  color: #f8f8f8;
 }
 
 header .nav-menu ul {
@@ -26,7 +34,145 @@ header .nav-menu ul li {
 
 header .nav-menu ul li a {
   text-decoration: none;
-  color: black;
+  color: #f8f8f8;
   font-size: 18px;
   font-weight: 600;
+  transition: 0.5s;
+}
+
+header .nav-menu .nav-button {
+  display: none;
+}
+
+.headline .social-network ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+header .nav-menu ul li a:hover {
+  padding-bottom: 10px;
+  border-bottom: solid 3px #3189ec;
+}
+
+/* ====== Headline ====== */
+
+.headline {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  height: calc(100vh - 70px);
+}
+
+.headline .social-network ul {
+  padding-right: 40px;
+}
+
+.headline .social-network ul li {
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+.headline .social-network ul li:hover {
+  transform: scale(1.2);
+}
+
+.headline .image img {
+  width: auto;
+  height: 100%;
+}
+
+.headline .social-network ul li a img {
+  width: 100%;
+  height: 100%;
+}
+
+.headline .resume {
+  flex-basis: 40%;
+  padding-left: 30px;
+}
+
+.headline .resume h1 {
+  font-size: 3rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+  color: #ff6b00;
+}
+
+.headline .resume h4 {
+  font-size: 1.5rem;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+
+.headline .resume p {
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+
+.headline .image {
+  position: absolute;
+  top: 120px;
+  right: 10px;
+  flex-grow: 1.5;
+  display: flex;
+  justify-content: flex-end;
+  height: 550px;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+    max-width: 375px;
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 10px 30px;
+    align-items: center;
+  }
+
+  header .nav-menu .nav-container {
+    display: none;
+  }
+
+  header .nav-menu .nav-button {
+    display: flex;
+    width: 30px;
+    height: 30px;
+  }
+
+  header .nav-menu .nav-button img {
+    width: 100%;
+  }
+
+  .headline {
+    flex-direction: column;
+    margin-top: 70px;
+    align-items: flex-start;
+  }
+
+  .headline .social-network {
+    order: 1;
+  }
+
+  .headline .social-network ul {
+    display: flex;
+  }
+
+  .headline .social-network ul li {
+    margin-right: 30px;
+  }
+
+  .headline .image {
+    top: 500px;
+    left: 550px;
+    order: 2;
+  }
 }
