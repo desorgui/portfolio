@@ -119,14 +119,17 @@ header .nav-menu ul li a:hover {
 .headline .image {
   position: absolute;
   top: 120px;
-  right: 10px;
+  width: 650px;
+  height: 650px;
+  right: -150px;
   flex-grow: 1.5;
   display: flex;
   justify-content: flex-end;
-  height: 550px;
+  background-image: url('https://wizzy-techno.netlify.app/techno_img/7hexa1dark.png');
+  background-size: 100% 100%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   body {
     width: 100%;
     max-width: 375px;
