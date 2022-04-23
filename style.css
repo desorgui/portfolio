@@ -1,13 +1,18 @@
 @import 'https://fonts.googleapis.com/css?family=Crete Round|Inter';
 
 body {
-  background-color: #111;
+  background-color: #e5e5e5;
   width: 100%;
   margin: 0;
   padding: 0;
-  color: #f8f8f8;
   overflow-x: hidden;
   max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  cursor: pointer;
 }
 
 header {
@@ -15,7 +20,7 @@ header {
   justify-content: space-between;
   align-items: baseline;
   padding: 7px 100px;
-  background-color: #444;
+  background-color: #3e3c3c;
 }
 
 header .brand a {
@@ -43,6 +48,7 @@ header .nav-menu ul li a {
 
 header .nav-menu .nav-button {
   display: none;
+  color: #f8f8f8;
 }
 
 .headline .social-network ul li a {
@@ -52,19 +58,25 @@ header .nav-menu .nav-button {
 
 header .nav-menu ul li a:hover {
   padding-bottom: 10px;
-  border-bottom: solid 3px #3189ec;
+  border-bottom: solid 3px #ff6b00;
 }
 
 /* ====== Headline ====== */
 
+#headline {
+  background-color: #1c1a19;
+}
+
 .headline {
   display: flex;
   align-items: center;
-  height: calc(100vh - 80px);
-  background-image: url('https://wizzy-techno.netlify.app/techno_img/7hexa1dark.png');
+  height: calc(100vh - 65px);
+  max-height: 700px;
+  color: #f8f8f8;
   background-size: 650px 650px;
   background-repeat: no-repeat;
-  background-position: 65vw 100%;
+  background-position: 55vw 0;
+  background-image: url('./images/Illustration-header.png');
 }
 
 .headline .social-network ul {
@@ -80,6 +92,15 @@ header .nav-menu ul li a:hover {
   transition: 0.5s;
 }
 
+.about-me .competence .competence-list li {
+  list-style: none;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 43px;
+}
+
 .headline .social-network ul li:hover {
   transform: scale(1.2);
 }
@@ -87,6 +108,14 @@ header .nav-menu ul li a:hover {
 .headline .resume {
   flex-basis: 40%;
   padding: 0 30px;
+}
+
+.my-work h1 {
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #091e42;
 }
 
 .headline .resume h1 {
@@ -105,9 +134,225 @@ header .nav-menu ul li a:hover {
 }
 
 .headline .resume p {
-  font-size: 20px;
-  font-family: Inter, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
   font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 566px;
+}
+
+/* --------- Works ---------- */
+.my-work {
+  padding: 100px 100px;
+}
+
+.my-work .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.my-work .cards .card {
+  width: 369px;
+  height: 435px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #f8f8f8;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-image: url('https://cdn.shopify.com/s/files/1/0430/1861/6996/products/lunette-rudy-project-deltabeat-orange-cote.jpg?v=1634910781');
+  background-color: #f58931;
+  background-size: 100% 100%;
+}
+
+.my-work .cards .card-featured {
+  grid-column: 1/-1;
+  height: 435px;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  color: #091e42;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-size: 100% 100%;
+}
+
+.my-work .cards .format p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.my-work .cards .card-featured.format .categories li {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #091E42;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #8993a4;
+  box-sizing: border-box;
+}
+
+.my-work .works .card-featured.format .see-project-btn {
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+}
+
+.my-work .cards .card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(179.4deg, rgba(38, 38, 38, 0) 0.81%, rgba(38, 38, 38, 0.9) 84.03%);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card-content {
+  padding: 1rem 1rem;
+  z-index: 2;
+}
+
+.my-work .works .format .work-title {
+  font-size: 2em;
+}
+
+.my-work .works .format .categories {
+  display: flex;
+  padding: 0 !important;
+}
+
+.about-me .competence .competence-list li.list-title {
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 44px;
+}
+
+.my-work .works .format .categories li {
+  list-style: none;
+  padding: 5px 7px;
+  margin-right: 1rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
+.my-work .works .format .see-project-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 58px;
+  color: #f8f8f8;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  transition: 0.4s;
+  background-color: #f55800;
+  outline: none;
+  border: none !important;
+}
+
+.my-work .works .card:hover {
+  border: 2px solid #091e42;
+}
+
+.my-work .works .card:hover .see-project-btn {
+  display: block;
+}
+
+.my-work .works .card:hover::before,
+.my-work .works .card:hover .card-content {
+  display: none;
+}
+
+.my-work .works .card:hover .card-content {
+  display: none;
+}
+
+/* ------- About me-------- */
+#about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+  background-color: #262626;
+  color: #f4f5f7;
+  background-image: url(./images/Frame.png);
+  background-repeat: no-repeat;
+  background-position: top 100px right 0;
+}
+
+.about-me .resume {
+  padding: 100px 0;
+}
+
+.about-me .resume .resume-text {
+  width: 566px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#about-me .resume h1 {
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3em;
+  line-height: 82px;
+  color: #f55800;
+}
+
+.about-me .resume .get-myresume-btn {
+  width: 161px;
+  height: 48px;
+  left: 12px;
+  top: 12px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #f55800;
+}
+
+#about-me .competence {
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: solid 1px #fff;
+}
+
+.about-me .competence .competence-list li.list-title::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 17px;
+  left: -20px;
+  background: #f55800;
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 480px) {
@@ -136,9 +381,10 @@ header .nav-menu ul li a:hover {
 
   .headline {
     flex-direction: column;
-    margin-top: 70px;
+    padding: 70px 0;
     align-items: flex-start;
-    background-position: 30px 50vh;
+    background-position: 30px 30vh;
+    background-blend-mode: multiply;
   }
 
   .headline .social-network {
@@ -151,5 +397,65 @@ header .nav-menu ul li a:hover {
 
   .headline .social-network ul li {
     margin-right: 30px;
+  }
+
+  .my-work {
+    padding: 50px 0;
+  }
+
+  .my-work h1 {
+    padding-left: 30px;
+  }
+
+  .my-work .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .my-work .cards .card-featured {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .my-work .cards .card-featured img {
+    width: 100%;
+  }
+
+  .my-work .works .card .see-project-btn {
+    position: relative;
+    display: block;
+    z-index: 2;
+  }
+
+  #about-me {
+    padding: 0 1rem;
+    background-position: left 70vw top 15vh;;
+  }
+
+  .about-me .resume {
+    width: 100%;
+  }
+
+  .about-me h1 {
+    margin: 0 !important;
+  }
+
+  .about-me .resume .resume-text {
+    width: auto;
+  }
+
+  .about-me .get-myresume-btn {
+    margin-top: 1rem;
+  }
+
+  #about-me .competence {
+    grid-template-columns: 1fr;
+  }
+
+  #about-me .competence ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
   }
 }
