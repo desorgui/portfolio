@@ -1,0 +1,155 @@
+@import 'https://fonts.googleapis.com/css?family=Crete Round|Inter';
+
+body {
+  background-color: #111;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #f8f8f8;
+  overflow-x: hidden;
+  max-width: 1400px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 7px 100px;
+  background-color: #444;
+}
+
+header .brand a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+header .nav-menu ul {
+  display: flex;
+}
+
+header .nav-menu ul li {
+  list-style: none;
+  padding-left: 30px;
+}
+
+header .nav-menu ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+header .nav-menu .nav-button {
+  display: none;
+}
+
+.headline .social-network ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+header .nav-menu ul li a:hover {
+  padding-bottom: 10px;
+  border-bottom: solid 3px #3189ec;
+}
+
+/* ====== Headline ====== */
+
+.headline {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background-image: url('https://wizzy-techno.netlify.app/techno_img/7hexa1dark.png');
+  background-size: 650px 650px;
+  background-repeat: no-repeat;
+  background-position: 65vw 100%;
+}
+
+.headline .social-network ul {
+  padding-right: 40px;
+}
+
+.headline .social-network ul li {
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+.headline .social-network ul li:hover {
+  transform: scale(1.2);
+}
+
+.headline .resume {
+  flex-basis: 40%;
+  padding: 0 30px;
+}
+
+.headline .resume h1 {
+  font-size: 3rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+  color: #ff6b00;
+}
+
+.headline .resume h4 {
+  font-size: 1.5rem;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+
+.headline .resume p {
+  font-size: 20px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 10px 30px;
+    align-items: center;
+  }
+
+  header .nav-menu .nav-container {
+    display: none;
+  }
+
+  header .nav-menu .nav-button {
+    display: flex;
+    font-size: 20px;
+  }
+
+  header .nav-menu .nav-button img {
+    width: 100%;
+  }
+
+  .headline {
+    flex-direction: column;
+    margin-top: 70px;
+    align-items: flex-start;
+    background-position: 30px 50vh;
+  }
+
+  .headline .social-network {
+    order: 1;
+  }
+
+  .headline .social-network ul {
+    display: flex;
+  }
+
+  .headline .social-network ul li {
+    margin-right: 30px;
+  }
+}
