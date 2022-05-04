@@ -12,12 +12,11 @@ body {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-
 
 button {
   cursor: pointer;
@@ -583,7 +582,7 @@ header .nav-menu ul li a:hover {
     display: flex;
     padding: 0;
   }
-  
+
   .social-media-container .item a {
     color: #505f79;
   }
