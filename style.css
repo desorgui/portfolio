@@ -11,6 +11,14 @@ body {
   margin-right: auto;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+
 button {
   cursor: pointer;
 }
@@ -529,6 +537,7 @@ header .nav-menu ul li a:hover {
     height: 18px;
     left: 16px;
     right: 16px;
+    width: 100%;
     top: calc(50% - 18px / 2);
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -573,6 +582,14 @@ header .nav-menu ul li a:hover {
     font-size: 30px;
     display: flex;
     padding: 0;
+  }
+  
+  .social-media-container .item a {
+    color: #505f79;
+  }
+
+  .social-media-container .item a:hover {
+    color: #f55800;
   }
 
   .item:not(:last-child) {
