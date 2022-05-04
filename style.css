@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Crete Round|Inter';
 
 body {
-  background-color: #e5e5e5;
+  background-color: #fff;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -211,7 +211,7 @@ header .nav-menu ul li a:hover {
   box-sizing: border-box;
 }
 
-.my-work .works .format .see-project-btn {
+.see-project-btn {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -230,7 +230,7 @@ header .nav-menu ul li a:hover {
   border: none !important;
 }
 
-.my-work .works .card-featured.format .see-project-btn {
+.see-project-btn {
   position: relative;
   display: block;
   width: auto;
@@ -276,7 +276,7 @@ header .nav-menu ul li a:hover {
   border: 2px solid #091e42;
 }
 
-.my-work .works .card:hover .see-project-btn {
+.see-project-btn {
   display: block;
 }
 
@@ -420,7 +420,7 @@ header .nav-menu ul li a:hover {
     width: 100%;
   }
 
-  .my-work .works .card .see-project-btn {
+  .see-project-btn {
     position: relative;
     display: block;
     z-index: 2;
@@ -463,7 +463,7 @@ header .nav-menu ul li a:hover {
   #form-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 120px 24px;
     position: absolute;
     width: 375px;
@@ -489,7 +489,9 @@ header .nav-menu ul li a:hover {
     line-height: 44px;
     text-align: center;
     color: #172b4d;
-    margin-bottom: 58px;
+  }
+  .form {
+    margin-top: 73px;
   }
   .form ul {
     display: flex;
@@ -503,13 +505,20 @@ header .nav-menu ul li a:hover {
     top: 394px;
     list-style: none;
   }
+
   .form_item {
     position: static;
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 85.45%;
+    width: 100%;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    border-bottom: solid 1px #dbd8d7;
+    margin-top: 39px;
   }
+
   .form_item input {
     /* position: absolute; */
     height: 18px;
@@ -525,6 +534,30 @@ header .nav-menu ul li a:hover {
     align-items: center;
     color: #979493;
     border: none;
+  }
+
+  #text {
+    padding: 12px;
+    vertical-align: top;
+    margin-top: 39px;
+    width: 327px;
+    height: 114px;
+  }
+  .frm-btn {
+    margin-top: 24px;
+  }
+
+  .social-media {
+    margin-top: 124px;
+  }
+
+  .social-media-container {
+    display: flex;
+    margin-top: 50px;
+    list-style: none;
+    font-size: 30px;
+    width: 100%;
+    justify-content: space-between;
   }
 
 }
