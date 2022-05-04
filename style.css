@@ -211,7 +211,8 @@ header .nav-menu ul li a:hover {
   box-sizing: border-box;
 }
 
-.see-project-btn {
+.my-work .works .format .see-project-btn,
+.frm-btn {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -230,7 +231,12 @@ header .nav-menu ul li a:hover {
   border: none !important;
 }
 
-.see-project-btn {
+.frm-btn {
+  display: block;
+}
+
+.my-work .works .card-featured.format .see-project-btn,
+.frm-btn {
   position: relative;
   display: block;
   width: auto;
@@ -276,7 +282,8 @@ header .nav-menu ul li a:hover {
   border: 2px solid #091e42;
 }
 
-.see-project-btn {
+.my-work .works .card:hover .see-project-btn,
+.frm-btn {
   display: block;
 }
 
@@ -420,7 +427,7 @@ header .nav-menu ul li a:hover {
     width: 100%;
   }
 
-  .see-project-btn {
+  .my-work .works .card .see-project-btn {
     position: relative;
     display: block;
     z-index: 2;
@@ -459,7 +466,7 @@ header .nav-menu ul li a:hover {
     padding: 0 !important;
   }
 
-  /* ------ Form -------*/
+  /* ------Form------- */
   #form-section {
     display: flex;
     flex-direction: column;
@@ -468,36 +475,35 @@ header .nav-menu ul li a:hover {
     position: absolute;
     width: 375px;
     height: 845px;
-    left: 0px;
-    /* top: 6038px; */
+    left: 0;
   }
 
   #form-text {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
-    position: static;
+    padding: 0;
     width: 327px;
     height: 216px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 44px;
     text-align: center;
     color: #172b4d;
   }
+
   .form {
     margin-top: 73px;
   }
-  .form ul {
+
+  .form .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 0;
     position: static;
     width: 327px;
     height: 330px;
@@ -520,11 +526,10 @@ header .nav-menu ul li a:hover {
   }
 
   .form_item input {
-    /* position: absolute; */
     height: 18px;
     left: 16px;
     right: 16px;
-    top: calc(50% - 18px/2);
+    top: calc(50% - 18px / 2);
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -542,15 +547,14 @@ header .nav-menu ul li a:hover {
     margin-top: 39px;
     width: 327px;
     height: 114px;
-
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    
-    color: #3C3A39; 
+    color: #3c3a39;
   }
+
   .frm-btn {
     margin-top: 24px;
   }
@@ -568,10 +572,10 @@ header .nav-menu ul li a:hover {
     list-style: none;
     font-size: 30px;
     display: flex;
-    padding: 0px;
+    padding: 0;
   }
-  .item:not(:last-child)
-  {
+
+  .item:not(:last-child) {
     margin-right: 20px;
   }
 }
