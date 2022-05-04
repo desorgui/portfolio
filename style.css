@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Crete Round|Inter';
 
 body {
-  background-color: #e5e5e5;
+  background-color: #fff;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -9,6 +9,13 @@ body {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 button {
@@ -211,7 +218,8 @@ header .nav-menu ul li a:hover {
   box-sizing: border-box;
 }
 
-.my-work .works .format .see-project-btn {
+.my-work .works .format .see-project-btn,
+.frm-btn {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -230,7 +238,12 @@ header .nav-menu ul li a:hover {
   border: none !important;
 }
 
-.my-work .works .card-featured.format .see-project-btn {
+.frm-btn {
+  display: block;
+}
+
+.my-work .works .card-featured.format .see-project-btn,
+.frm-btn {
   position: relative;
   display: block;
   width: auto;
@@ -276,7 +289,8 @@ header .nav-menu ul li a:hover {
   border: 2px solid #091e42;
 }
 
-.my-work .works .card:hover .see-project-btn {
+.my-work .works .card:hover .see-project-btn,
+.frm-btn {
   display: block;
 }
 
@@ -457,5 +471,127 @@ header .nav-menu ul li a:hover {
     justify-content: center;
     align-items: center;
     padding: 0 !important;
+  }
+
+  /* ------Form------- */
+  #form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 24px;
+    position: absolute;
+    width: 375px;
+    height: 845px;
+    left: 0;
+  }
+
+  #form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 327px;
+    height: 216px;
+    left: 0;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    color: #172b4d;
+  }
+
+  .form {
+    margin-top: 73px;
+  }
+
+  .form .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    position: static;
+    width: 327px;
+    height: 330px;
+    left: 24px;
+    top: 394px;
+    list-style: none;
+  }
+
+  .form_item {
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 85.45%;
+    width: 100%;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    border-bottom: solid 1px #dbd8d7;
+    margin-top: 39px;
+  }
+
+  .form_item input {
+    height: 18px;
+    left: 16px;
+    right: 16px;
+    width: 100%;
+    top: calc(50% - 18px / 2);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #979493;
+    border: none;
+  }
+
+  #text {
+    padding: 12px;
+    vertical-align: top;
+    margin-top: 39px;
+    width: 327px;
+    height: 114px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #3c3a39;
+  }
+
+  .frm-btn {
+    margin-top: 24px;
+  }
+
+  .social-media {
+    border-top: 1px solid #dfe1e6;
+    margin-top: 124px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-media-container {
+    margin-top: 50px;
+    list-style: none;
+    font-size: 30px;
+    display: flex;
+    padding: 0;
+  }
+
+  .social-media-container .item a {
+    color: #505f79;
+  }
+
+  .social-media-container .item a:hover {
+    color: #f55800;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 20px;
   }
 }
