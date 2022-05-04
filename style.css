@@ -542,22 +542,36 @@ header .nav-menu ul li a:hover {
     margin-top: 39px;
     width: 327px;
     height: 114px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    
+    color: #3C3A39; 
   }
   .frm-btn {
     margin-top: 24px;
   }
 
   .social-media {
+    border-top: 1px solid #dfe1e6;
     margin-top: 124px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .social-media-container {
-    display: flex;
     margin-top: 50px;
     list-style: none;
     font-size: 30px;
-    width: 100%;
-    justify-content: space-between;
+    display: flex;
+    padding: 0px;
   }
-
+  .item:not(:last-child)
+  {
+    margin-right: 20px;
+  }
 }
