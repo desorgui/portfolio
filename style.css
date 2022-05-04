@@ -469,8 +469,9 @@ header .nav-menu ul li a:hover {
     width: 375px;
     height: 845px;
     left: 0px;
-    top: 6038px;
+    /* top: 6038px; */
   }
+
   #form-text {
     display:flex;
     flex-direction: column;
@@ -478,5 +479,52 @@ header .nav-menu ul li a:hover {
     padding: 0px;
     position: static;
     width: 327px;
+    height: 216px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    color: #172b4d;
+    margin-bottom: 58px;
   }
+  .form ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    position: static;
+    width: 327px;
+    height: 330px;
+    left: 24px;
+    top: 394px;
+    list-style: none;
+  }
+  .form_item {
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 85.45%;
+  }
+  .form_item input {
+    /* position: absolute; */
+    height: 18px;
+    left: 16px;
+    right: 16px;
+    top: calc(50% - 18px/2);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #979493;
+    border: none;
+  }
+
 }
