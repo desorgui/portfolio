@@ -429,6 +429,8 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .contact form .form-container .row {
   display: flex;
   justify-content: space-between;
+  padding-left: 0 !important;
+  width: 100%;
 }
 
 .form_item {
