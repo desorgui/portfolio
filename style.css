@@ -26,7 +26,7 @@ button {
   font-family: 'Inter', sans-serif;
 }
 
-.font-crete {  
+.font-crete {
   font-family: 'Crete Round', sans-serif;
 }
 
@@ -36,7 +36,11 @@ button.see-project-btn:hover {
   color: #f55800 !important;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 10px 0;
 }
 
@@ -258,11 +262,12 @@ header .nav-menu ul li:not(:last-child) a:hover {
   transition: 0.4s;
   background-color: #f55800;
   outline: none;
-  border: none ;
+  border: none;
 }
 
 .frm-btn {
   display: block;
+  margin-top: 24px;
 }
 
 .my-work .works .card-featured.format .see-project-btn,
@@ -388,11 +393,11 @@ header .nav-menu ul li:not(:last-child) a:hover {
   transform: rotate(-45deg);
 }
 
-/*------------- Contact ----------------*/
+/* ------------- Contact ---------------- */
 .contact {
   display: flex;
   justify-content: space-between;
-  padding: 100px 5% ;
+  padding: 100px 5%;
 }
 
 .contact .form-text {
@@ -419,7 +424,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
   flex-direction: column;
   width: 100%;
   padding: 0;
-  list-style: none;
 }
 
 .contact form .form-container .row {
@@ -427,22 +431,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   justify-content: space-between;
 }
 
-.contact form .form-container .row li {
-  width: 45%;
-}
-
-.form-container li {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
 .form_item {
-  position: static;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 85.45%;
   width: 100%;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -450,7 +439,17 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin-top: 39px;
 }
 
-.form_item input {
+.contact form .form-container .row .form_item {
+  width: 45%;
+}
+
+.form-container .item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form_item .input {
   height: 18px;
   width: 100%;
   top: calc(50% - 18px / 2);
@@ -481,16 +480,12 @@ header .nav-menu ul li:not(:last-child) a:hover {
   color: #3c3a39;
 }
 
-.frm-btn {
-  margin-top: 24px;
-}
-
 .footer-section .social-media ul {
   list-style: none;
   display: flex;
 }
 
-.social-media { 
+.social-media {
   border-top: 1px solid #dfe1e6;
   width: 100%;
   display: flex;
@@ -505,7 +500,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   padding: 0;
 }
 
-.footer-section .social-media-container .item a {
+.footer-section .social-media-container .item .icon {
   color: #505f79;
 }
 
@@ -517,8 +512,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin-right: 20px;
 }
 
-
-
 @media screen and (max-width: 992px) {
   .my-work .grid {
     grid-template-columns: 1fr 1fr;
@@ -526,8 +519,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
   #about-me {
     background-position: top 100px left 70vw;
+  }
 }
-}
+
 @media screen and (max-width: 769px) {
   #about-me .competence {
     grid-template-columns: 1fr 1fr;
@@ -570,9 +564,8 @@ header .nav-menu ul li:not(:last-child) a:hover {
   .headline .social-network ul li {
     margin-right: 30px;
   }
-
-
 }
+
 @media screen and (max-width: 480px) {
   body {
     width: 100%;
@@ -650,7 +643,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
     font-size: 30px;
   }
 
-  .contact #form {    
+  .contact #form {
     width: 100%;
     overflow: hidden;
     padding-left: 0;
@@ -681,28 +674,22 @@ header .nav-menu ul li:not(:last-child) a:hover {
     list-style: none;
   }
 
-  
-.contact form .form-container .row {
-  flex-direction: column;
-  width: 100%;
-}
+  .contact form .form-container .row {
+    flex-direction: column;
+    width: 100%;
+  }
 
-.contact form .form-container .row li {
-  width: 100%;
-}
+  .contact form .form-container .row li {
+    width: 100%;
+  }
 
-  .form-container li {
+  .form-container .item {
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .form_item {
-    position: static;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 85.45%;
+  .contact form .form-container .row .form_item {
     width: 100%;
     padding-bottom: 16px;
     padding-left: 16px;
@@ -710,7 +697,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
     margin-top: 39px;
   }
 
-  .form_item input {
+  .form_item .input {
     height: 18px;
     width: 100%;
     top: calc(50% - 18px / 2);
@@ -769,7 +756,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
     color: #f55800;
   }
 
-  .item:not(:last-child) {
+  .social-media-container .item:not(:last-child) {
     margin-right: 20px;
   }
 }
