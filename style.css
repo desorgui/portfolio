@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  max-width: 1400px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,12 +44,27 @@ h5 {
   margin: 10px 0;
 }
 
+/* ==============================================
+===============================================
+===============================================
+==================================================
+================================================ */
 header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 7px 100px;
   background-color: #3e3c3c;
+  padding: 10px 30px;
+}
+
+header .nav-menu .nav-container {
+  display: none;
+}
+
+header .nav-menu .nav-button {
+  display: flex;
+  font-size: 20px;
+  color: #f8f8f8;
 }
 
 header .brand a {
@@ -58,39 +73,14 @@ header .brand a {
   color: #f8f8f8;
 }
 
-header .nav-menu ul {
-  display: flex;
+.card-featured .featured-image img {
+  width: 100%;
+  height: 100%;
 }
 
-header .nav-menu ul li {
-  list-style: none;
-  padding-left: 30px;
+header .nav-menu .nav-button img {
+  width: 100%;
 }
-
-header .nav-menu ul li a {
-  text-decoration: none;
-  color: #f8f8f8;
-  font-size: 18px;
-  font-weight: 600;
-  transition: 0.5s;
-}
-
-header .nav-menu .nav-button {
-  display: none;
-  color: #f8f8f8;
-}
-
-.headline .social-network ul li a {
-  text-decoration: none;
-  color: #f8f8f8;
-}
-
-header .nav-menu ul li:not(:last-child) a:hover {
-  padding-bottom: 10px;
-  border-bottom: solid 3px #ff6b00;
-}
-
-/* ====== Headline ====== */
 
 #headline {
   background-color: #1c1a19;
@@ -99,16 +89,19 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .headline {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  padding: 70px 0;
   height: calc(100vh - 65px);
   max-height: 700px;
   color: #f8f8f8;
-  background-size: 650px 650px;
+  background-size: 450px 450px;
   background-repeat: no-repeat;
-  background-position: 55vw 0;
+  background-position: left 20vh top 45vh;
   background-image: url('./images/Illustration-header.png');
 }
 
 .headline .social-network ul {
+  display: flex;
   padding-right: 40px;
 }
 
@@ -119,8 +112,256 @@ header .nav-menu ul li:not(:last-child) a:hover {
   overflow: hidden;
   margin-top: 10px;
   transition: 0.5s;
+  margin-right: 30px;
 }
 
+.my-work {
+  padding: 100px 5%;
+}
+
+.my-work .grid {
+  display: grid;
+  grid-gap: 2rem;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+.my-work h1 {
+  padding-left: 30px;
+}
+
+.my-work .cards .card-featured {
+  grid-column: 1/-1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  justify-content: flex-start;
+  color: #091e42;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-size: 100% 100%;
+}
+
+.my-work .cards .card-featured img {
+  width: 100%;
+}
+
+.my-work .works .card .see-project-btn {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  background-color: #262626;
+  color: #f4f5f7;
+  background-image: url(./images/Frame.png);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: right -70px top 40vh;
+}
+
+.about-me .resume {
+  width: 100%;
+  padding: 100px 0;
+}
+
+.about-me .resume .resume-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  width: auto;
+  line-height: 24px;
+}
+
+.about-me h1 {
+  margin: 0 !important;
+}
+
+.about-me .get-myresume-btn {
+  margin-top: 1rem;
+}
+
+#about-me .competence {
+  grid-template-columns: 1fr;
+  padding: 100px 0;
+  display: grid;
+  border-top: solid 1px #fff;
+}
+
+.footer-section .social-media ul {
+  list-style: none;
+  display: flex;
+}
+
+#about-me .competence ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+
+/* ------Form------- */
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+.contact p.text {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px;
+  font-size: 30px;
+  align-items: center;
+  color: #262626;
+}
+
+.contact #form {
+  width: 100%;
+  overflow: hidden;
+  padding-left: 0;
+}
+
+#form-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+.form .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  position: static;
+  width: 100%;
+  list-style: none;
+}
+
+.contact form .form-container .row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 0 !important;
+}
+
+.contact form .form-container .row li {
+  width: 100%;
+}
+
+.form-container .item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact form .form-container .row .form_item {
+  width: 100%;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  border-bottom: solid 1px #dbd8d7;
+  margin-top: 39px;
+}
+
+.form_item .input {
+  height: 18px;
+  width: 100%;
+  top: calc(50% - 18px / 2);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #979493;
+  border: none;
+  outline: none;
+}
+
+#text {
+  padding: 12px;
+  vertical-align: top;
+  margin-top: 39px;
+  width: 100%;
+  min-width: 280px;
+  height: 114px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  outline: none;
+  border: solid 1px #dbd8d7;
+  color: #3c3a39;
+}
+
+.frm-btn {
+  display: block;
+  margin-top: 24px;
+}
+
+.social-media {
+  border-top: 1px solid #dfe1e6;
+  margin-top: 124px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-container {
+  margin-top: 50px;
+  list-style: none;
+  font-size: 30px;
+  display: flex;
+  padding: 0;
+}
+
+.social-media-container .item a {
+  color: #505f79;
+}
+
+.headline .social-network ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+.social-media-container .item a:hover {
+  color: #f55800;
+}
+
+.social-media-container .item:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+
+/* ===========================================
+                General
+============================================== */
+
+header .nav-menu ul li:not(:last-child) a:hover {
+  padding-bottom: 10px;
+  border-bottom: solid 3px #ff6b00;
+}
+
+/* ====== Headline ====== */
 .about-me .competence .competence-list .competence-item {
   list-style: none;
   font-style: normal;
@@ -138,11 +379,19 @@ header .nav-menu ul li:not(:last-child) a:hover {
   padding: 0 30px;
 }
 
-.my-work h1 {
+.my-work .section-title {
   font-weight: 400;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 2em;
+  line-height: 30px;
   color: #091e42;
+  margin-bottom: 20px;
+}
+
+.my-work .section-title span {
+  height: 2px;
+  width: 100%;
+  min-width: 300px;
+  background-color: #111;
 }
 
 .headline .resume h1 {
@@ -168,18 +417,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
 }
 
 /* --------- Works ---------- */
-.my-work {
-  padding: 7% 5%;
-}
-
-.my-work .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
-  overflow: hidden;
-  width: 100%;
-}
-
 .my-work .cards .card {
   width: 100%;
   height: auto;
@@ -195,28 +432,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-image: url('https://cdn.shopify.com/s/files/1/0430/1861/6996/products/lunette-rudy-project-deltabeat-orange-cote.jpg?v=1634910781');
   background-color: #f58931;
   background-size: 100% 100%;
-}
-
-.my-work .cards .card-featured {
-  grid-column: 1/-1;
-  width: 100%;
-  display: flex;
-  position: relative;
-  justify-content: flex-start;
-  color: #091e42;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  background-size: 100% 100%;
-}
-
-.card-featured .featured-image {
-  width: 100%;
-}
-
-.card-featured .featured-image img {
-  width: 100%;
-  height: 100%;
 }
 
 .my-work .cards .format p {
@@ -248,10 +463,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 .my-work .works .format .see-project-btn,
 .frm-btn {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
-  display: none;
   width: 100%;
   height: 58px;
   color: #f8f8f8;
@@ -263,11 +477,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-color: #f55800;
   outline: none;
   border: none;
-}
-
-.frm-btn {
-  display: block;
-  margin-top: 24px;
 }
 
 .my-work .works .card-featured.format .see-project-btn,
@@ -321,39 +530,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   display: block;
 }
 
-.my-work .works .card:hover::before,
-.my-work .works .card:hover .card-content {
-  display: none;
-}
-
-.my-work .works .card:hover .card-content {
-  display: none;
-}
-
 /* ------- About me-------- */
-#about-me {
-  display: flex;
-  flex-direction: column;
-  padding: 0 5%;
-  background-color: #262626;
-  color: #f4f5f7;
-  background-image: url(./images/Frame.png);
-  background-repeat: no-repeat;
-  background-position: top 100px right 0;
-}
-
-.about-me .resume {
-  padding: 100px 0;
-}
-
-.about-me .resume .resume-text {
-  width: 566px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
-
 #about-me .resume h1 {
   font-style: normal;
   font-weight: 400;
@@ -373,13 +550,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
   line-height: 24px;
   color: #fff;
   background-color: #f55800;
-}
-
-#about-me .competence {
-  padding: 100px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-top: solid 1px #fff;
 }
 
 .about-me .competence .competence-list li.list-title::before {
@@ -404,94 +574,12 @@ header .nav-menu ul li:not(:last-child) a:hover {
   width: 40%;
 }
 
-.contact #form {
-  width: 60%;
-  padding-left: 50px;
-}
-
-.contact p.text {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  align-items: center;
-  color: #262626;
-}
-
 .contact form .form-container {
   list-style: none;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0;
-}
-
-.contact form .form-container .row {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0 !important;
-  width: 100%;
-}
-
-.form_item {
-  width: 100%;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  border-bottom: solid 1px #dbd8d7;
-  margin-top: 39px;
-}
-
-.contact form .form-container .row .form_item {
-  width: 45%;
-}
-
-.form-container .item {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.form_item .input {
-  height: 18px;
-  width: 100%;
-  top: calc(50% - 18px / 2);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  color: #979493;
-  border: none;
-  outline: none;
-}
-
-#text {
-  padding: 12px;
-  vertical-align: top;
-  margin-top: 39px;
-  width: 100%;
-  min-width: 280px;
-  height: 114px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  outline: none;
-  border: solid 1px #dbd8d7;
-  color: #3c3a39;
-}
-
-.footer-section .social-media ul {
-  list-style: none;
-  display: flex;
-}
-
-.social-media {
-  border-top: 1px solid #dfe1e6;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .footer-section .social-media-container {
@@ -514,189 +602,431 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 992px) {
-  .my-work .grid {
-    grid-template-columns: 1fr 1fr;
-  }
+/* ============================================
+==============================================
+==============================================
+============================================== */
 
-  #about-me {
-    background-position: top 100px left 70vw;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  #about-me .competence {
-    grid-template-columns: 1fr 1fr;
+@media screen and (min-width: 1080px) {
+  body {
+    max-width: 1400px !important;
   }
 
   header {
-    padding: 10px 30px;
-    align-items: center;
-  }
-
-  header .nav-menu .nav-container {
-    display: none;
-  }
-
-  header .nav-menu .nav-button {
     display: flex;
-    font-size: 20px;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 100px;
+    background-color: #3e3c3c;
   }
 
-  header .nav-menu .nav-button img {
-    width: 100%;
+  header .brand a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #f8f8f8;
   }
 
-  .headline {
-    flex-direction: column;
-    padding: 70px 0;
-    align-items: flex-start;
-    background-position: 30px 30vh;
-    background-blend-mode: multiply;
+  header .nav-menu ul {
+    display: flex !important;
   }
 
-  .headline .social-network {
-    order: 1;
-  }
-
-  .headline .social-network ul {
-    display: flex;
-  }
-
-  .headline .social-network ul li {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .my-work {
-    padding: 50px 0;
-  }
-
-  .my-work h1 {
+  header .nav-menu ul li {
+    list-style: none;
     padding-left: 30px;
   }
 
+  header .nav-menu ul li a {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+
+  header .nav-menu .nav-button {
+    display: none;
+    color: #f8f8f8;
+  }
+
+  .headline .social-network ul li a {
+    text-decoration: none;
+    color: #f8f8f8;
+  }
+
+  header .nav-menu ul li:not(:last-child) a:hover {
+    padding-bottom: 10px;
+    border-bottom: solid 3px #ff6b00;
+  }
+
+  /* ====== Headline ====== */
+
+  #headline {
+    background-color: #1c1a19;
+  }
+
+  .headline {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: calc(100vh - 200px) !important;
+    max-height: 700px;
+    color: #f8f8f8;
+    background-size: 650px 650px;
+    background-repeat: no-repeat;
+    background-position: top 15vh right 0;
+    background-image: url('./images/Illustration-header.png');
+  }
+
+  .headline .resume {
+    order: 1;
+    flex-basis: 40%;
+    padding: 0 30px;
+  }
+
+  .headline .social-network ul {
+    padding-right: 40px;
+    flex-direction: column;
+  }
+
+  .headline .social-network ul li {
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    margin-top: 10px;
+    transition: 0.5s;
+  }
+
+  .about-me .competence .competence-list .competence-item {
+    list-style: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 43px;
+  }
+
+  .headline .social-network ul li:hover {
+    transform: scale(1.2);
+  }
+
+  .my-work h1 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    color: #091e42;
+  }
+
+  .headline .resume h1 {
+    font-size: 3rem;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-weight: 400;
+    color: #ff6b00;
+  }
+
+  .headline .resume h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .headline .resume p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 566px;
+  }
+
+  /* --------- Works ---------- */
+  .my-work {
+    padding: 7% 5%;
+  }
+
   .my-work .grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-gap: 2rem;
+    width: 100%;
+  }
+
+  .my-work .cards .card {
+    width: 100%;
+    height: auto;
+    min-height: 435px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #f8f8f8;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-image: url('https://cdn.shopify.com/s/files/1/0430/1861/6996/products/lunette-rudy-project-deltabeat-orange-cote.jpg?v=1634910781');
+    background-color: #f58931;
+    background-size: 100% 100%;
   }
 
   .my-work .cards .card-featured {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .my-work .cards .card-featured img {
+    grid-column: 1/-1;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-start;
+    color: #091e42;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-size: 100% 100%;
   }
 
-  .my-work .works .card .see-project-btn {
-    position: relative;
-    display: block;
+  .card-featured .featured-image {
+    width: 60%;
+  }
+
+  .card-content {
+    padding: 1rem 1rem;
     z-index: 2;
   }
 
-  #about-me {
-    padding: 0 1rem;
-    background-position: left 70vw top 15vh;
+  .card-featured .card-content {
+    width: 40%;
   }
 
-  .about-me .resume {
+  .card-featured .featured-image img {
     width: 100%;
+    height: 100%;
   }
 
-  .about-me h1 {
-    margin: 0 !important;
+  .my-work .cards .format p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  .about-me .resume .resume-text {
+  .my-work .works .format .categories li {
+    list-style: none;
+    padding: 5px 7px;
+    margin-right: 1rem;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.24);
+  }
+
+  .my-work .cards .card-featured.format .categories li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #091e42;
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid #8993a4;
+    box-sizing: border-box;
+  }
+
+  .my-work .works .format .see-project-btn,
+  .frm-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 58px;
+    color: #f8f8f8;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    transition: 0.4s;
+    background-color: #f55800;
+    outline: none;
+    border: none;
+  }
+
+  .frm-btn {
+    display: block;
+    margin-top: 24px;
+  }
+
+  .my-work .works .card-featured.format .see-project-btn,
+  .frm-btn {
+    position: relative;
+    display: block;
     width: auto;
+    height: auto;
+    padding: 10px 15px;
   }
 
-  .about-me .get-myresume-btn {
-    margin-top: 1rem;
+  .my-work .cards .card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(179.4deg, rgba(38, 38, 38, 0) 0.81%, rgba(38, 38, 38, 0.9) 84.03%);
+    z-index: 1;
+    transition: 0.5s;
   }
 
-  #about-me .competence {
-    grid-template-columns: 1fr;
+  .my-work .works .format .work-title {
+    font-size: 2em;
   }
 
-  #about-me .competence ul {
+  .my-work .works .format .categories {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0 !important;
   }
 
-  /* ------Form------- */
-  #contact-section {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0;
+  .about-me .competence .competence-list li.list-title {
+    position: relative;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 44px;
   }
 
-  .contact p.text {
-    font-size: 30px;
+  .my-work .works .card:hover {
+    border: 2px solid #091e42;
+  }
+
+  .my-work .works .card:hover .see-project-btn,
+  .frm-btn {
+    display: block;
+  }
+
+  .my-work .works .card:hover::before,
+  .my-work .works .card:hover .card-content {
+    display: none;
+  }
+
+  .my-work .works .card:hover .card-content {
+    display: none;
+  }
+
+  /* ------- About me-------- */
+  #about-me {
+    display: flex;
+    flex-direction: column;
+    padding: 0 124px;
+    background-color: #262626;
+    color: #f4f5f7;
+    background-image: url(./images/Frame.png);
+    background-size: 500px 350px;
+    background-repeat: no-repeat;
+    background-position: top 50px right 0;
+  }
+
+  .about-me .resume {
+    padding: 100px 0;
+  }
+
+  .about-me .resume .resume-text {
+    width: 566px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #about-me .resume h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 82px;
+    color: #f55800;
+  }
+
+  .about-me .resume .get-myresume-btn {
+    width: 161px;
+    height: 48px;
+    left: 12px;
+    top: 12px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: #fff;
+    background-color: #f55800;
+  }
+
+  #about-me .competence {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    border-top: solid 1px #fff;
+  }
+
+  .about-me .competence .competence-list li.list-title::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 17px;
+    left: -20px;
+    background: #f55800;
+    transform: rotate(-45deg);
+  }
+
+  /* ------------- Contact ---------------- */
+  .contact {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    padding: 100px 5%;
+  }
+
+  .contact .form-text {
+    width: 40% !important;
   }
 
   .contact #form {
-    width: 100%;
-    overflow: hidden;
-    padding-left: 0;
+    width: 60% !important;
+    padding-left: 50px;
   }
 
-  #form-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    width: 100%;
-    left: 0;
-    top: 0;
+  .contact p.text {
+    font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 44px;
-    text-align: center;
-    color: #172b4d;
+    font-size: 40px;
+    line-height: 52px;
+    align-items: center;
+    color: #262626;
   }
 
-  .form .form-container {
+  .contact form .form-container {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0;
-    position: static;
     width: 100%;
-    list-style: none;
+    padding: 0;
   }
 
   .contact form .form-container .row {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .contact form .form-container .row li {
-    width: 100%;
-  }
-
-  .form-container .item {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row !important;
+    justify-content: space-between;
+    padding-left: 0 !important;
+    width: 100%;
   }
 
-  .contact form .form-container .row .form_item {
+  .form_item {
     width: 100%;
     padding-bottom: 16px;
     padding-left: 16px;
     border-bottom: solid 1px #dbd8d7;
     margin-top: 39px;
+  }
+
+  .contact form .form-container .row .form_item {
+    width: 45%;
+  }
+
+  .form-container .item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .form_item .input {
@@ -730,19 +1060,19 @@ header .nav-menu ul li:not(:last-child) a:hover {
     color: #3c3a39;
   }
 
-  .frm-btn {
-    margin-top: 24px;
+  .footer-section .social-media ul {
+    list-style: none;
+    display: flex;
   }
 
   .social-media {
     border-top: 1px solid #dfe1e6;
-    margin-top: 124px;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .social-media-container {
+  .footer-section .social-media-container {
     margin-top: 50px;
     list-style: none;
     font-size: 30px;
@@ -750,15 +1080,15 @@ header .nav-menu ul li:not(:last-child) a:hover {
     padding: 0;
   }
 
-  .social-media-container .item a {
+  .footer-section .social-media-container .item .icon {
     color: #505f79;
   }
 
-  .social-media-container .item a:hover {
+  .footer-section .social-media-container .item a:hover {
     color: #f55800;
   }
 
-  .social-media-container .item:not(:last-child) {
+  .footer-section .item:not(:last-child) {
     margin-right: 20px;
   }
 }
