@@ -204,7 +204,7 @@ header .nav-menu .nav-button img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 !important;
 }
 
@@ -605,7 +605,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 ==============================================
 ============================================== */
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   body {
     max-width: 1400px !important;
   }
@@ -984,12 +984,18 @@ header .nav-menu ul li:not(:last-child) a:hover {
     padding-left: 50px;
   }
 
+  #form-text {
+    text-align: left;
+  }
+
   .contact p.text {
     font-style: normal;
     font-weight: 700;
+    display: flex;
     font-size: 40px;
     line-height: 52px;
-    align-items: center;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
     color: #262626;
   }
 
