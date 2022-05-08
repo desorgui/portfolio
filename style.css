@@ -67,13 +67,12 @@ header .nav-menu .nav-button {
   color: #f8f8f8;
 }
 
-
 header .brand {
   animation: rot 3s 1;
 }
 
 @keyframes rot {
-  50% {transform: rotate(180deg);}
+  50% { transform: rotate(180deg); }
 }
 
 header .brand a {
