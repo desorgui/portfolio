@@ -67,6 +67,15 @@ header .nav-menu .nav-button {
   color: #f8f8f8;
 }
 
+
+header .brand {
+  animation: rot 3s 1;
+}
+
+@keyframes rot {
+  50% {transform: rotate(180deg);}
+}
+
 header .brand a {
   font-size: 25px;
   text-decoration: none;
@@ -370,6 +379,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 .headline .social-network ul li:hover {
   transform: scale(1.2);
+  animation: rot 2s 1;
 }
 
 .headline .resume {
