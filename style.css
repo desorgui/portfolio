@@ -471,7 +471,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  transition: 0.4s;
+  transition: all 1s linear;
   background-color: #f55800;
   outline: none;
   border: none;
@@ -607,7 +607,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 @media screen and (min-width: 1080px) {
   body {
-    max-width: 1400px !important;
+    max-width: 1920px !important;
   }
 
   header {
