@@ -200,13 +200,30 @@ header .nav-menu .nav-button img {
   display: flex;
 }
 
+#about-me .competence-main ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 !important;
+}
+
+#about-me .competence-main ul li {
+  list-style: none;
+}
+
 #about-me .competence ul {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 !important;
 }
+
+.languages-list .competence-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 /* ------Form------- */
 #contact-section {
