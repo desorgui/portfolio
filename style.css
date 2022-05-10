@@ -212,7 +212,7 @@ header .nav-menu .nav-button img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0 !important;
 }
 
@@ -480,7 +480,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  transition: 0.4s;
+  transition: all 1s linear;
   background-color: #f55800;
   outline: none;
   border: none;
@@ -616,7 +616,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 @media screen and (min-width: 768px) {
   body {
-    max-width: 1400px !important;
+    max-width: 1920px !important;
   }
 
   header {
@@ -963,6 +963,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr !important;
     border-top: solid 1px #fff;
+  }
+
+  #about-me .competence .competence-list {
+    align-items: flex-start;
   }
 
   .about-me .competence .competence-list li.list-title::before {
