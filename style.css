@@ -204,7 +204,7 @@ header .nav-menu .nav-button img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0 !important;
 }
 
@@ -954,6 +954,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr !important;
     border-top: solid 1px #fff;
+  }
+
+  #about-me .competence .competence-list {
+    align-items: flex-start;
   }
 
   .about-me .competence .competence-list li.list-title::before {
