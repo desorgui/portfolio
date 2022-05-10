@@ -400,17 +400,18 @@ header .nav-menu ul li:not(:last-child) a:hover {
   color: #ff6b00;
 }
 
-.headline .resume h4 {
-  font-size: 1.5rem;
+.headline .resume .h4 {
+  font-size: 32px;
+  line-height: 44px;
   font-weight: 500;
 }
 
-.headline .resume p {
+.headline .resume .desc {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 32px;
   max-width: 566px;
 }
 
@@ -723,7 +724,8 @@ header .nav-menu ul li:not(:last-child) a:hover {
   }
 
   .headline .resume h4 {
-    font-size: 1.5rem;
+    font-size: 32px;
+    line-height: 44px;
     font-weight: 500;
   }
 
