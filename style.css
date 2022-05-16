@@ -111,6 +111,10 @@ header .mobile-nav {
   border-radius: 8px;
 }
 
+.active {
+  display: block !important;
+}
+
 .btn-close {
   display: flex !important;
   align-items: flex-start;
