@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Crete Round|Inter';
+@import 'https://fonts.googleapis.com/css?family=Crete Round|Inter|Roboto';
 
 body {
   background-color: #fff;
@@ -30,7 +30,8 @@ button {
   font-family: 'Crete Round', sans-serif;
 }
 
-button.see-project-btn:hover {
+button.see-project-btn:hover,
+.popup-btn:hover {
   background: #fff5e1 !important;
   border: solid 1px #f55800 !important;
   color: #f55800 !important;
@@ -177,7 +178,6 @@ header .nav-menu .nav-button img {
 
 .headline .social-network ul {
   display: flex;
-  padding-right: 40px;
 }
 
 .headline .social-network ul li {
@@ -192,6 +192,7 @@ header .nav-menu .nav-button img {
 
 .my-work {
   padding: 100px 5%;
+  position: relative;
 }
 
 .my-work .grid {
@@ -515,7 +516,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   line-height: 24px;
 }
 
-.my-work .works .format .categories li {
+.categories li {
   list-style: none;
   padding: 5px 7px;
   margin-right: 1rem;
@@ -523,6 +524,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-color: rgba(255, 255, 255, 0.24);
 }
 
+#popup .categories li,
 .my-work .cards .card-featured.format .categories li {
   font-style: normal;
   font-weight: 500;
@@ -536,7 +538,8 @@ header .nav-menu ul li:not(:last-child) a:hover {
 }
 
 .my-work .works .format .see-project-btn,
-.frm-btn {
+.frm-btn,
+.popup-btn {
   position: relative;
   bottom: 0;
   left: 0;
@@ -547,18 +550,24 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  transition: all 1s linear;
+  transition: all .4s linear;
   background-color: #f55800;
   outline: none;
   border: none;
 }
 
+.popup-btn {
+  margin: 0 !important;
+}
+
 .my-work .works .card-featured.format .see-project-btn,
-.frm-btn {
+.frm-btn,
+.popup-btn {
   position: relative;
   display: block;
   width: auto;
   height: auto;
+  margin-top: 20px;
   padding: 10px 15px;
 }
 
@@ -582,7 +591,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-size: 2em;
 }
 
-.my-work .works .format .categories {
+.categories {
   display: flex;
   padding: 0 !important;
 }
@@ -602,6 +611,56 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .my-work .works .card:hover .see-project-btn,
 .frm-btn {
   display: block;
+}
+
+#popup {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 24px;
+  position: absolute;
+  width: 343px;
+  height: 718px;
+  left: calc(50% - 343px/2);
+  top: 60px;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  z-index: 200;
+}
+
+#popup .popup-title {
+  width: 259px;
+  height: 82px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172B4D;
+  margin: 0;
+}
+
+#popup .btn-close {
+  font-size: 20px;
+  right: 10px;
+}
+
+#popup .popup-image {
+  width: 100%;
+}
+
+#popup .popup-image img {
+  width: 100%;
+}
+
+.popup-text {
+  margin: 0;
+}
+
+.btngroup {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ------- About me-------- */
@@ -762,7 +821,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   }
 
   .headline .social-network ul {
-    padding-right: 40px;
+    padding-left: 40px;
     flex-direction: column;
   }
 
@@ -885,7 +944,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
     line-height: 24px;
   }
 
-  .my-work .works .format .categories li {
+  .categories li {
     list-style: none;
     padding: 5px 7px;
     margin-right: 1rem;
@@ -893,7 +952,15 @@ header .nav-menu ul li:not(:last-child) a:hover {
     background-color: rgba(255, 255, 255, 0.24);
   }
 
-  .my-work .cards .card-featured.format .categories li {
+  #popup {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+
+  .categories li {
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -953,7 +1020,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
     font-size: 2em;
   }
 
-  .my-work .works .format .categories {
+  .categories {
     display: flex;
     padding: 0 !important;
   }
