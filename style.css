@@ -81,7 +81,7 @@ header .brand a {
 }
 
 header .mobile-nav {
-  display: block;
+  display: none;
   position: fixed;
   padding-top: 62px;
   top: 0;
