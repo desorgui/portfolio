@@ -557,7 +557,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 }
 
 .popup-btn {
-  margin: 0 !important;
+  margin-top: 0;
 }
 
 .my-work .works .card-featured.format .see-project-btn,
@@ -618,10 +618,12 @@ header .nav-menu ul li:not(:last-child) a:hover {
   display: flex;
   flex-direction: column;
   padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
   gap: 24px;
   position: absolute;
   width: 343px;
-  height: 718px;
+  height: fit-content;
   left: calc(50% - 343px/2);
   top: 60px;
   background: #fff;
@@ -630,8 +632,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
 }
 
 #popup .popup-title {
-  width: 259px;
-  height: 82px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -655,6 +655,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
 }
 
 .popup-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
   margin: 0;
 }
 
@@ -954,10 +957,38 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
   #popup {
     width: 100%;
+    max-width: 1200px;
     left: 0px;
     right: 0px;
     top: 0px;
     bottom: 0px;
+  }
+  #popup .popup-image {
+    width: 60%;
+  }
+
+  #popup .popup-title {
+    height: 32px;
+  }
+
+  .d-flex{
+    display: flex;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    padding: 1rem;
+  }
+
+  .btngroup {
+    justify-content: flex-start;
+  }
+
+  .btngroup .popup-btn {
+    margin-right: 30px;
   }
 
   .categories li {
