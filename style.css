@@ -44,11 +44,18 @@ h5 {
   margin: 10px 0;
 }
 
-/* ==============================================
-===============================================
-===============================================
-==================================================
-================================================ */
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -79,6 +86,72 @@ header .brand a {
   font-size: 25px;
   text-decoration: none;
   color: #f8f8f8;
+}
+
+header .mobile-nav {
+  display: none;
+  position: fixed;
+  padding-top: 62px;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #3c3a39;
+  z-index: 1000;
+}
+
+.mobile-nav .menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 8px;
+  position: absolute;
+  width: 100%;
+  height: 184px;
+  left: 24px;
+  top: 150px;
+}
+
+.mobile-nav .menu-list li {
+  width: 80%;
+  height: 56px;
+  border-radius: 8px;
+}
+
+.active {
+  display: block !important;
+}
+
+.btn-close {
+  display: flex !important;
+  align-items: flex-start;
+  padding: 8px;
+  justify-content: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 24px;
+  font-size: 32px;
+  color: #67798e;
+  border-radius: 8px;
+}
+
+.mb-item {
+  width: 100%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #fff5e1;
+  padding-left: 24px;
+  border-bottom: 1px solid #979493;
+}
+
+.mobile-nav .btn-close {
+  display: none;
 }
 
 .card-featured .featured-image img {
@@ -217,7 +290,7 @@ header .nav-menu .nav-button img {
 }
 
 /* ------Form------- */
-#contact-section {
+#contact-me {
   display: flex;
   flex-direction: column;
   padding-bottom: 0;
@@ -409,17 +482,18 @@ header .nav-menu ul li:not(:last-child) a:hover {
   color: #ff6b00;
 }
 
-.headline .resume h4 {
-  font-size: 1.5rem;
+.headline .resume .h4 {
+  font-size: 32px;
+  line-height: 44px;
   font-weight: 500;
 }
 
-.headline .resume p {
+.headline .resume .desc {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 32px;
   max-width: 566px;
 }
 
@@ -627,6 +701,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
     background-color: #3e3c3c;
   }
 
+  .mobile-nav {
+    display: none !important;
+  }
+
   header .brand a {
     font-size: 25px;
     text-decoration: none;
@@ -732,7 +810,8 @@ header .nav-menu ul li:not(:last-child) a:hover {
   }
 
   .headline .resume h4 {
-    font-size: 1.5rem;
+    font-size: 32px;
+    line-height: 44px;
     font-weight: 500;
   }
 

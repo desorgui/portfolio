@@ -9,21 +9,39 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 		/>
-		<title>My Portfolio</title>
+		<title>Desor Guishny Portfolio</title>
 	</head>
 	<body>
 		<header>
+			<div class="mobile-nav">
+				<ul class="menu-list">
+					<li>
+						<a href="#my-work" class="mb-item font-inter">Portfolio</a>
+					</li>
+					<li>
+						<a href="#about-me" class="mb-item font-inter">About</a>
+					</li>
+					<li>
+						<a href="#contact-me" class="mb-item font-inter">Contact</a>
+					</li>
+				</ul>
+				<div class="btn-close">
+					<nav class="btn-close">
+						<i class="fa-solid fa-xmark"></i>
+					</nav>
+				</div>
+			</div>
 			<div id="nav" class="brand"><a href="#">My Brand</a></div>
 			<nav class="nav-menu">
 				<ul class="nav-container">
-					<li class="nav-item"><a href="#">Portfolio</a></li>
-					<li class="nav-item"><a href="#">About</a></li>
-					<li class="nav-item"><a href="#">Contact</a></li>
+					<li class="nav-item"><a href="#my-work">Portfolio</a></li>
+					<li class="nav-item"><a href="#about-me">About</a></li>
+					<li class="nav-item"><a href="#contact-me">Contact</a></li>
 					<li class="nav-item">
 						<a href="#"><i class="fa fa-envelope"></i></a>
 					</li>
 				</ul>
-				<nav class="nav-button">
+				<nav class="nav-button" id="nav-button">
 					<i class="fa-solid fa-bars"></i>
 				</nav>
 			</nav>
@@ -35,11 +53,11 @@
 						Hey There. <br />
 						<span>I'm Guishny</span>
 					</h1>
-					<h4 class="font-inter">I'm a software Developer</h4>
+					<h2 class="font-inter h4">I'm a software Developer</h2>
 					<p class="desc">
-						Hello I’m a software developer! I can help you build a product ,
+						Hello I'm a software developer! I can help you build a product ,
 						feature or website Look through some of my work and experience! If
-						you like what you see and have a project you need coded, don’t
+						you like what you see and have a project you need coded, don't
 						hestiate to contact me.
 					</p>
 				</div>
@@ -72,16 +90,18 @@
 						</li>
 					</ul>
 				</div>
-				
 			</div>
 		</section>
 		<section class="my-work" id="my-work">
-			<h1 class="section-title font-crete">My Recents works <span></span></h1>
+			<h2 class="section-title font-crete">My Recents works <span></span></h2>
 			<div class="container cards works grid" id="cards-container">
 				<!-- Card -->
 				<div class="card-featured format">
 					<div class="featured-image">
-						<img src="./images/Img-Placeholder.png" alt="" />
+						<img
+							src="./images/Img-Placeholder.png"
+							alt="Multi-post Stories Image"
+						/>
 					</div>
 					<div class="card-content">
 						<h3 class="work-title font-crete">Multi-Post Stories</h3>
@@ -204,19 +224,21 @@
 		</section>
 		<section class="about-me" id="about-me">
 			<div class="resume">
-				<h1 class="font-crete">About me</h1>
+				<h2 class="font-crete">About me</h2>
 				<p class="resume-text font-inter">
-					Hello I’m a software developer! I can help you build a product ,
+					Hello I'm a software developer! I can help you build a product ,
 					feature or website Look through some of my work and experience! If you
-					like what you see and have a project you need coded, don’t hestiate to
+					like what you see and have a project you need coded, don't hestiate to
 					contact me.
 				</p>
 				<button class="get-myresume-btn font-inter">Get my resume</button>
 			</div>
 			<div class="competence">
 				<ul class="competence-list">
-					<li class="competence-item list-title languages font-inter">
-						Languages
+					<li>
+						<h3 class="competence-item list-title languages font-inter">
+							Languages
+						</h3>
 					</li>
 					<li class="competence-item font-inter">Javascript</li>
 					<li class="competence-item font-inter">Ruby</li>
@@ -224,16 +246,21 @@
 					<li class="competence-item font-inter">Html</li>
 				</ul>
 				<ul class="competence-list">
-					<li class="competence-item font-inter list-title frameworks">
-						Frameworks
+					<li>
+						<h3 class="competence-item font-inter list-title frameworks">
+							Frameworks
+						</h3>
 					</li>
 					<li class="competence-item font-inter">Bootstrap</li>
 					<li class="competence-item font-inter">React</li>
 					<li class="competence-item font-inter">Gatsby</li>
 					<li class="competence-item font-inter">Laravel</li>
 				</ul>
+
 				<ul class="competence-list">
-					<li class="competence-item font-inter list-title skills">Skills</li>
+					<li>
+						<h3 class="competence-item font-inter list-title skills">Skills</h3>
+					</li>
 					<li class="competence-item font-inter">Github</li>
 					<li class="competence-item font-inter">Codepen</li>
 					<li class="competence-item font-inter">Codesandbox</li>
@@ -241,7 +268,7 @@
 				</ul>
 			</div>
 		</section>
-		<section id="contact-section" class="contact-section contact">
+		<section id="contact-me" class="contact-section contact">
 			<div id="form-text" class="form-text">
 				<p class="text font-inter">
 					I'm always interested in hearing about new projects, so if you'd like
@@ -330,5 +357,6 @@
 				</ul>
 			</div>
 		</section>
+		<script src="custom.js"></script>
 	</body>
 </html>
