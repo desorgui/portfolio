@@ -64,3 +64,23 @@ const WorkData = [
   },
 ];
 
+
+const workssection = document.querySelector('#cards-container');
+
+for (let i = 0; i <= 5; i += 1) {
+  const cardDiv = document.createElement('div');
+  cardDiv.className = 'card format';
+  if (i == 0){
+    cardDiv.classList.add("card-featured");
+    cardDiv.classList.remove("card");
+  }
+  cardDiv.innerHTML = `
+        <div class="featured-image">
+          <img
+            class="image"
+            src="${WorkData[i].image}"
+            alt="snapshot_img${i + 1}"
+          />
+        </div>`
+  workssection.appendChild(cardDiv);
+}
