@@ -82,5 +82,27 @@ for (let i = 0; i <= 5; i += 1) {
             alt="snapshot_img${i + 1}"
           />
         </div>`
+        const cardContent = document.createElement('div');
+        cardContent.className = 'card-content';
+        cardDiv.appendChild(cardContent);
+        cardContent.innerHTML = `
+              <h3 class="work-title">${WorkData[i].name}</h3>
+              <p class="work-description font-inter">
+                  ${WorkData[i].description}
+              </p>
+          `;
+        const listContainer = document.createElement('ul');
+        listContainer.className = 'categories';
+        cardContent.appendChild(listContainer);
+        WorkData[i].technologies.forEach((element) => {
+          const listItem = document.createElement('li');
+          listItem.textContent = element;
+          listContainer.appendChild(listItem);
+        });
+  
   workssection.appendChild(cardDiv);
+  cardContent.innerHTML += `
+    <button class="see-project-btn seeMore font-inter">See Project</button>`;
 }
+
+
