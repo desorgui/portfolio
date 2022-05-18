@@ -509,6 +509,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-size: 100% 100%;
 }
 
+.card img {
+  display: none;
+}
+
 .my-work .cards .format p {
   font-style: normal;
   font-weight: 400;
@@ -540,7 +544,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .my-work .works .format .see-project-btn,
 .frm-btn,
 .popup-btn {
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -594,6 +598,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .categories {
   display: flex;
   padding: 0 !important;
+  margin-bottom: 60px;
 }
 
 .about-me .competence .competence-list li.list-title {
@@ -632,8 +637,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
 }
 
 #popup .popup-title {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -963,6 +966,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
     top: 0px;
     bottom: 0px;
   }
+
   #popup .popup-image {
     width: 60%;
   }
@@ -971,7 +975,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
     height: 32px;
   }
 
-  .d-flex{
+  .d-flex {
     display: flex;
   }
 
@@ -991,49 +995,14 @@ header .nav-menu ul li:not(:last-child) a:hover {
     margin-right: 30px;
   }
 
-  .categories li {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
-    color: #091e42;
-    padding: 8px 12px;
-    background: #fff;
-    border: 1px solid #8993a4;
-    box-sizing: border-box;
-  }
-
   .my-work .works .format .see-project-btn,
   .frm-btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: none;
-    width: 100%;
-    height: 58px;
-    color: #f8f8f8;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 24px;
-    transition: 0.4s;
-    background-color: #f55800;
-    outline: none;
-    border: none;
   }
 
   .frm-btn {
     display: block;
     margin-top: 24px;
-  }
-
-  .my-work .works .card-featured.format .see-project-btn,
-  .frm-btn {
-    position: relative;
-    display: block;
-    width: auto;
-    height: auto;
-    padding: 10px 15px;
   }
 
   .my-work .cards .card::before {
@@ -1052,8 +1021,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   }
 
   .categories {
-    display: flex;
-    padding: 0 !important;
+    margin-bottom: 0;
   }
 
   .about-me .competence .competence-list li.list-title {
@@ -1074,11 +1042,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
   }
 
   .my-work .works .card:hover::before,
-  .my-work .works .card:hover .card-content {
-    display: none;
-  }
-
-  .my-work .works .card:hover .card-content {
+  .my-work .works .card:hover .card-content .work-title,
+  .my-work .works .card:hover .card-content .work-description,
+  .my-work .works .card:hover .card-content .categories {
     display: none;
   }
 
