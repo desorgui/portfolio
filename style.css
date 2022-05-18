@@ -37,6 +37,10 @@ button.see-project-btn:hover,
   color: #f55800 !important;
 }
 
+.popup-btn:hover a {
+  color: #f55800 !important;
+}
+
 h1,
 h2,
 h3,
@@ -528,7 +532,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-color: rgba(255, 255, 255, 0.24);
 }
 
-#popup .categories li,
+.popup .categories li,
 .my-work .cards .card-featured.format .categories li {
   font-style: normal;
   font-weight: 500;
@@ -558,6 +562,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-color: #f55800;
   outline: none;
   border: none;
+}
+
+.popup-btn a {
+  color: #f8f8f8;
 }
 
 .popup-btn {
@@ -618,7 +626,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   display: block;
 }
 
-#popup {
+.popup {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -626,7 +634,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin-left: auto;
   margin-right: auto;
   gap: 24px;
-  position: absolute;
+  position: fixed;
   width: 343px;
   height: fit-content;
   left: calc(50% - 343px/2);
@@ -636,7 +644,19 @@ header .nav-menu ul li:not(:last-child) a:hover {
   z-index: 200;
 }
 
-#popup .popup-title {
+.popup::before {
+  content: '';
+  width: 100%;
+  position: fixed;
+  background-color: #172b4da9;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  filter: blur(10px);
+  z-index: -10;
+}
+
+.popup .popup-title {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -644,16 +664,16 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin: 0;
 }
 
-#popup .btn-close {
+.popup .btn-close {
   font-size: 20px;
   right: 10px;
 }
 
-#popup .popup-image {
+.popup .popup-image {
   width: 100%;
 }
 
-#popup .popup-image img {
+.popup .popup-image img {
   width: 100%;
 }
 
@@ -958,20 +978,22 @@ header .nav-menu ul li:not(:last-child) a:hover {
     background-color: rgba(255, 255, 255, 0.24);
   }
 
-  #popup {
+  .popup {
     width: 100%;
     max-width: 1200px;
     left: 0px;
     right: 0px;
-    top: 0px;
+    top: 50px;
     bottom: 0px;
   }
 
-  #popup .popup-image {
+
+
+  .popup .popup-image {
     width: 60%;
   }
 
-  #popup .popup-title {
+  .popup .popup-title {
     height: 32px;
   }
 
