@@ -684,7 +684,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   content: '';
   width: 100%;
   position: fixed;
-  background-color: #f1f1f1d5;
+  background-color: #ebebeb4a;
   height: 100vh;
   left: 0;
   top: 0;
