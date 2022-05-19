@@ -103,6 +103,7 @@ for (let i = 0; i < WorkData.length; i += 1) {
   cardContent.appendChild(listContainer);
   WorkData[i].technologies.forEach((element) => {
     const listItem = document.createElement('li');
+    listItem.className = "itemCat";
     listItem.textContent = element;
     listContainer.appendChild(listItem);
   });
@@ -134,6 +135,7 @@ button.forEach((element, index) => {
 
     WorkData[index].technologies.forEach((element) => {
       const listItem = document.createElement('li');
+      listItem.className = "itemCat";
       listItem.textContent = element;
       listContainer.appendChild(listItem);
     });
@@ -142,6 +144,7 @@ button.forEach((element, index) => {
     <div class="d-flex">
             <div class="popup-image">
               <img
+              class="image"
                 src="${WorkData[index].image}"
                 alt="My popup image"
               />
@@ -151,10 +154,10 @@ button.forEach((element, index) => {
                 ${WorkData[index].description}
               </p>
               <div class="btngroup">
-                <button class="popup-btn font-inter"><a href="${WorkData[index].liveversion}">See Live </a><span></span
+                <button class="popup-btn font-inter"><a href="${WorkData[index].liveversion}" class="anker">See Live </a><span></span
                   ><i class="fa-solid fa-satellite-dish"></i>
                 </button>
-                <button class="popup-btn font-inter"><a href="${WorkData[index].source}">See Source </a><span><i class="fa-brands fa-github"></i></span>
+                <button class="popup-btn font-inter"><a href="${WorkData[index].source}" class="anker">See Source </a><span><i class="fa-brands fa-github"></i></span>
                 </button>
               </div>
             </div>
