@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Crete Round|Inter';
+@import 'https://fonts.googleapis.com/css?family=Crete Round|Inter|Roboto';
 
 body {
   background-color: #fff;
@@ -79,7 +79,9 @@ header .brand {
 }
 
 @keyframes rot {
-  50% { transform: rotate(180deg); }
+  50% {
+    transform: rotate(180deg);
+  }
 }
 
 header .brand a {
@@ -123,7 +125,8 @@ header .mobile-nav {
   display: block !important;
 }
 
-.btn-close {
+.btn-close,
+.close-popup {
   display: flex !important;
   align-items: flex-start;
   padding: 8px;
@@ -183,7 +186,6 @@ header .nav-menu .nav-button img {
 
 .headline .social-network ul {
   display: flex;
-  padding-right: 40px;
 }
 
 .headline .social-network ul li {
@@ -198,6 +200,7 @@ header .nav-menu .nav-button img {
 
 .my-work {
   padding: 100px 5%;
+  position: relative;
 }
 
 .my-work .grid {
@@ -510,9 +513,18 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background-image: url('https://cdn.shopify.com/s/files/1/0430/1861/6996/products/lunette-rudy-project-deltabeat-orange-cote.jpg?v=1634910781');
   background-color: #f58931;
   background-size: 100% 100%;
+}
+
+.featured-image {
+  height: 100%;
+}
+
+.card .image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .my-work .cards .format p {
@@ -520,9 +532,13 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.my-work .works .format .categories li {
+.categories .itemCat {
   list-style: none;
   padding: 5px 7px;
   margin-right: 1rem;
@@ -530,6 +546,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-color: rgba(255, 255, 255, 0.24);
 }
 
+.popup .categories .itemCat,
 .my-work .cards .card-featured.format .categories li {
   font-style: normal;
   font-weight: 500;
@@ -543,8 +560,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
 }
 
 .my-work .works .format .see-project-btn,
-.frm-btn {
-  position: relative;
+.frm-btn,
+.popup-btn {
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -554,19 +572,39 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  transition: all 1s linear;
+  transition: all 0.4s linear;
   background-color: #f55800;
   outline: none;
   border: none;
 }
 
+.popup-btn .anker {
+  color: #f8f8f8;
+}
+
+.popup-btn:hover .anker {
+  color: #f55800 !important;
+}
+
+.popup-btn {
+  margin-top: 0;
+}
+
 .my-work .works .card-featured.format .see-project-btn,
-.frm-btn {
+.frm-btn,
+.popup-btn {
   position: relative;
   display: block;
   width: auto;
   height: auto;
+  margin-top: 20px;
   padding: 10px 15px;
+}
+
+.popup-btn:hover {
+  background: #fff5e1 !important;
+  border: solid 1px #f55800 !important;
+  color: #f55800 !important;
 }
 
 .my-work .cards .card::before {
@@ -589,12 +627,17 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-size: 2em;
 }
 
-.my-work .works .format .categories {
+.categories {
   display: flex;
   padding: 0 !important;
+  margin-bottom: 60px;
 }
 
-.about-me .competence .competence-list li.list-title {
+.popup .categories {
+  margin-bottom: 0;
+}
+
+.about-me .competence .competence-list .list-title {
   position: relative;
   font-style: normal;
   font-weight: 700;
@@ -609,6 +652,80 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .my-work .works .card:hover .see-project-btn,
 .frm-btn {
   display: block;
+}
+
+.popup {
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 24px;
+  position: fixed;
+  width: 343px;
+  height: fit-content;
+  left: calc(50% - 343px / 2);
+  top: 30px;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  z-index: 200;
+}
+
+.popup-active {
+  display: flex !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup::after {
+  content: '';
+  width: 100%;
+  position: fixed;
+  background-color: #ebebeb4a;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  filter: blur(10px);
+  z-index: -10;
+}
+
+.popup .popup-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.popup .close-popup {
+  font-size: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.popup .popup-image {
+  width: 100%;
+}
+
+.popup .popup-image .image {
+  width: 100%;
+  max-height: 200px;
+}
+
+.popup-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.btngroup {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ------- About me-------- */
@@ -633,7 +750,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   background-color: #f55800;
 }
 
-.about-me .competence .competence-list li.list-title::before {
+.about-me .competence .competence-list .list-title::before {
   content: '';
   position: absolute;
   width: 12px;
@@ -682,11 +799,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .footer-section .item:not(:last-child) {
   margin-right: 20px;
 }
-
-/* ============================================
-==============================================
-==============================================
-============================================== */
 
 @media screen and (min-width: 768px) {
   body {
@@ -769,7 +881,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   }
 
   .headline .social-network ul {
-    padding-right: 40px;
+    padding-left: 40px;
     flex-direction: column;
   }
 
@@ -788,6 +900,12 @@ header .nav-menu ul li:not(:last-child) a:hover {
     font-weight: 400;
     font-size: 22px;
     line-height: 43px;
+  }
+
+  .about-me .competence .competence-list .list-title {
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 44px;
   }
 
   .headline .social-network ul li:hover {
@@ -885,14 +1003,12 @@ header .nav-menu ul li:not(:last-child) a:hover {
     height: 100%;
   }
 
-  .my-work .cards .format p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+  .popup .popup-image .image {
+    width: 100%;
+    max-height: 60vh;
   }
 
-  .my-work .works .format .categories li {
+  .categories .itemCat {
     list-style: none;
     padding: 5px 7px;
     margin-right: 1rem;
@@ -900,49 +1016,52 @@ header .nav-menu ul li:not(:last-child) a:hover {
     background-color: rgba(255, 255, 255, 0.24);
   }
 
-  .my-work .cards .card-featured.format .categories li {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
-    color: #091e42;
-    padding: 8px 12px;
-    background: #fff;
-    border: 1px solid #8993a4;
-    box-sizing: border-box;
+  .popup {
+    width: 100%;
+    max-width: 1200px;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+  }
+
+  .popup .popup-image {
+    width: 60%;
+  }
+
+  .popup .popup-title {
+    height: 32px;
+    margin-bottom: 0;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    padding: 1rem;
+  }
+
+  .btngroup {
+    justify-content: flex-start;
+  }
+
+  .btngroup .popup-btn {
+    margin-right: 30px;
   }
 
   .my-work .works .format .see-project-btn,
   .frm-btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: none;
-    width: 100%;
-    height: 58px;
-    color: #f8f8f8;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 24px;
-    transition: 0.4s;
-    background-color: #f55800;
-    outline: none;
-    border: none;
   }
 
   .frm-btn {
     display: block;
     margin-top: 24px;
-  }
-
-  .my-work .works .card-featured.format .see-project-btn,
-  .frm-btn {
-    position: relative;
-    display: block;
-    width: auto;
-    height: auto;
-    padding: 10px 15px;
   }
 
   .my-work .cards .card::before {
@@ -960,17 +1079,12 @@ header .nav-menu ul li:not(:last-child) a:hover {
     font-size: 2em;
   }
 
-  .my-work .works .format .categories {
-    display: flex;
-    padding: 0 !important;
+  .categories {
+    margin-bottom: 0;
   }
 
-  .about-me .competence .competence-list li.list-title {
-    position: relative;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5em;
-    line-height: 44px;
+  .popup .categories {
+    margin-bottom: 20px;
   }
 
   .my-work .works .card:hover {
@@ -983,11 +1097,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
   }
 
   .my-work .works .card:hover::before,
-  .my-work .works .card:hover .card-content {
-    display: none;
-  }
-
-  .my-work .works .card:hover .card-content {
+  .my-work .works .card:hover .card-content .work-title,
+  .my-work .works .card:hover .card-content .work-description,
+  .my-work .works .card:hover .card-content .categories {
     display: none;
   }
 
@@ -1046,17 +1158,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
   #about-me .competence .competence-list {
     align-items: flex-start;
-  }
-
-  .about-me .competence .competence-list li.list-title::before {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 17px;
-    left: -20px;
-    background: #f55800;
-    transform: rotate(-45deg);
   }
 
   /* ------------- Contact ---------------- */
