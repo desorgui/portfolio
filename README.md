@@ -51,3 +51,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse Student Projects (Figma)
+
+## Portfolio link
+- visit my portfolio at this [link](https://desorgui.github.io/portfolio)

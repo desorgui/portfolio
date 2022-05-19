@@ -79,6 +79,14 @@ header .nav-menu .nav-button {
   color: #f8f8f8;
 }
 
+header .brand {
+  animation: rot 3s 1;
+}
+
+@keyframes rot {
+  50% { transform: rotate(180deg); }
+}
+
 header .brand a {
   font-size: 25px;
   text-decoration: none;
@@ -101,7 +109,7 @@ header .mobile-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  padding: 0;
   gap: 8px;
   position: absolute;
   width: 100%;
@@ -126,18 +134,16 @@ header .mobile-nav {
   align-items: flex-start;
   padding: 8px;
   justify-content: center;
-
   position: absolute;
   width: 40px;
   height: 40px;
   right: 24px;
   font-size: 32px;
-  color: #67798E;
+  color: #67798e;
   border-radius: 8px;
 }
 
 .mb-item {
-  font-family: 'Inter';
   width: 100%;
   font-style: normal;
   font-weight: 700;
@@ -145,7 +151,7 @@ header .mobile-nav {
   line-height: 44px;
   display: flex;
   align-items: center;
-  color: #FFF5E1;
+  color: #fff5e1;
   padding-left: 24px;
   border-bottom: 1px solid #979493;
 }
@@ -451,6 +457,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 .headline .social-network ul li:hover {
   transform: scale(1.2);
+  animation: rot 2s 1;
 }
 
 .headline .resume {
