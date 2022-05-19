@@ -79,7 +79,9 @@ header .brand {
 }
 
 @keyframes rot {
-  50% { transform: rotate(180deg); }
+  50% {
+    transform: rotate(180deg);
+  }
 }
 
 header .brand a {
@@ -696,7 +698,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
   line-height: 44px;
   color: #172b4d;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .popup .close-popup {
@@ -711,13 +713,13 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 .popup .popup-image .image {
   width: 100%;
-  max-height: 250px;
+  max-height: 200px;
 }
 
 .popup-text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 25px;
   margin: 0;
 }
 
@@ -1001,9 +1003,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
     height: 100%;
   }
 
-  .popup .popup-image img {
+  .popup .popup-image .image {
     width: 100%;
-    max-height: 380px;
+    max-height: 60vh;
   }
 
   .categories .itemCat {
