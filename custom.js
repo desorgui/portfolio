@@ -104,7 +104,7 @@ for (let i = 0; i < WorkData.length; i += 1) {
   cardContent.appendChild(listContainer);
   WorkData[i].technologies.forEach((element) => {
     const listItem = document.createElement('li');
-    listItem.className = "itemCat";
+    listItem.className = 'itemCat';
     listItem.textContent = element;
     listContainer.appendChild(listItem);
   });
@@ -136,7 +136,7 @@ button.forEach((element, index) => {
 
     WorkData[index].technologies.forEach((element) => {
       const listItem = document.createElement('li');
-      listItem.className = "itemCat";
+      listItem.className = 'itemCat';
       listItem.textContent = element;
       listContainer.appendChild(listItem);
     });
