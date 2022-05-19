@@ -120,7 +120,8 @@ header .mobile-nav {
   display: block !important;
 }
 
-.btn-close {
+.btn-close,
+.close-popup {
   display: flex !important;
   align-items: flex-start;
   padding: 8px;
@@ -508,13 +509,18 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background-image: url('https://cdn.shopify.com/s/files/1/0430/1861/6996/products/lunette-rudy-project-deltabeat-orange-cote.jpg?v=1634910781');
   background-color: #f58931;
   background-size: 100% 100%;
 }
 
+.featured-image {
+  height: 100%;
+}
+
 .card img {
-  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .my-work .cards .format p {
@@ -522,6 +528,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .categories li {
@@ -609,6 +619,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
   margin-bottom: 60px;
 }
 
+.popup .categories {
+  margin-bottom: 0;
+}
+
 .about-me .competence .competence-list li.list-title {
   position: relative;
   font-style: normal;
@@ -628,7 +642,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 .popup {
   box-sizing: border-box;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 16px;
   margin-left: auto;
@@ -638,17 +652,25 @@ header .nav-menu ul li:not(:last-child) a:hover {
   width: 343px;
   height: fit-content;
   left: calc(50% - 343px/2);
-  top: 60px;
+  top: 30px;
   background: #fff;
   border: 1px solid #dfe1e6;
   z-index: 200;
 }
 
-.popup::before {
+.popup-active {
+  display: flex !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup::after {
   content: '';
   width: 100%;
   position: fixed;
-  background-color: #172b4da9;
+  background-color: #f1f1f1d5;
   height: 100vh;
   left: 0;
   top: 0;
@@ -662,11 +684,13 @@ header .nav-menu ul li:not(:last-child) a:hover {
   line-height: 44px;
   color: #172B4D;
   margin: 0;
+  margin-bottom: 30px;
 }
 
-.popup .btn-close {
+.popup .close-popup {
   font-size: 20px;
   right: 10px;
+  cursor: pointer;
 }
 
 .popup .popup-image {
@@ -675,6 +699,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
 .popup .popup-image img {
   width: 100%;
+  max-height: 250px;
 }
 
 .popup-text {
@@ -760,11 +785,6 @@ header .nav-menu ul li:not(:last-child) a:hover {
 .footer-section .item:not(:last-child) {
   margin-right: 20px;
 }
-
-/* ============================================
-==============================================
-==============================================
-============================================== */
 
 @media screen and (min-width: 768px) {
   body {
@@ -963,11 +983,9 @@ header .nav-menu ul li:not(:last-child) a:hover {
     height: 100%;
   }
 
-  .my-work .cards .format p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+  .popup .popup-image img {
+    width: 100%;
+    max-height: 380px;
   }
 
   .categories li {
@@ -995,6 +1013,7 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
   .popup .popup-title {
     height: 32px;
+    margin-bottom: 0;
   }
 
   .d-flex {
@@ -1044,6 +1063,10 @@ header .nav-menu ul li:not(:last-child) a:hover {
 
   .categories {
     margin-bottom: 0;
+  }
+
+  .popup .categories {
+    margin-bottom: 20px;
   }
 
   .about-me .competence .competence-list li.list-title {
