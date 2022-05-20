@@ -171,3 +171,19 @@ button.forEach((element, index) => {
     });
   });
 });
+
+const userEmail = document.querySelector('#email');
+const form = document.querySelector('#form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const lowerCase = (userEmail.value).toLowerCase();
+  if (userEmail.value !== lowerCase) {
+    const span = document.createElement('span');
+    span.className = 'errorMsg';
+    span.innerHTML = 'Your email must be lowercase';
+    form.appendChild(span);
+  } else {
+    form.submit();
+  }
+});
