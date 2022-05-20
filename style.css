@@ -380,6 +380,12 @@ header .nav-menu .nav-button img {
   outline: none;
 }
 
+form .errorMsg {
+  position: absolute;
+  margin-top: 20px;
+  color: red;
+}
+
 #text {
   padding: 12px;
   vertical-align: top;

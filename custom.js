@@ -171,3 +171,16 @@ button.forEach((element, index) => {
     });
   });
 });
+
+const userEmail = document.querySelector('#email');
+const form = document.querySelector('#form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const lowerCase = (userEmail.value).toLowerCase();
+  if (userEmail.value !== lowerCase) {
+   
+  } else {
+    form.submit();
+  }
+});
