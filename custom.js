@@ -173,14 +173,35 @@ button.forEach((element, index) => {
 });
 
 const userEmail = document.querySelector('#email');
+const userName = document.querySelector('#name');
+const userMessage = document.querySelector('#text');
 const form = document.querySelector('#form');
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const lowerCase = (userEmail.value).toLowerCase();
   if (userEmail.value !== lowerCase) {
-   
+    const span = document.createElement('span');
+    span.className = 'errorMsg';
+    span.innerHTML = 'Your email must be lowercase';
+    form.appendChild(span);
   } else {
     form.submit();
   }
 });
+
+const dataStorage = {
+  data: [''],
+};
+
+function setValues() {
+  const datasaved = JSON.parse(localStorage.getItem('session'));
+  [userEmail.value, userName.value, userMessage.value] = datasaved.data;
+}
+
+function populateStorage() {
+  dataStorage.data[0] = userEmail.value;
+  dataStorage.data[1] = userName.value;
+  dataStorage.data[2] = userMessage.value;
+  localStorage.setItem('session', JSON.stringify(dataStorage));
+  setValues();
+}
