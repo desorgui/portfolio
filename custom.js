@@ -205,3 +205,9 @@ function populateStorage() {
   localStorage.setItem('session', JSON.stringify(dataStorage));
   setValues();
 }
+
+if (localStorage.getItem('session')) setValues();
+else populateStorage();
+userEmail.onchange = populateStorage;
+userName.onchange = populateStorage;
+userMessage.onchange = populateStorage;
