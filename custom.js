@@ -173,8 +173,9 @@ button.forEach((element, index) => {
 });
 
 const userEmail = document.querySelector('#email');
+const userName = document.querySelector('#name');
+const userMessage = document.querySelector('#text');
 const form = document.querySelector('#form');
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const lowerCase = (userEmail.value).toLowerCase();
@@ -187,3 +188,26 @@ form.addEventListener('submit', (e) => {
     form.submit();
   }
 });
+
+const dataStorage = {
+  data: [''],
+};
+
+function setValues() {
+  const datasaved = JSON.parse(localStorage.getItem('session'));
+  [userEmail.value, userName.value, userMessage.value] = datasaved.data;
+}
+
+function populateStorage() {
+  dataStorage.data[0] = userEmail.value;
+  dataStorage.data[1] = userName.value;
+  dataStorage.data[2] = userMessage.value;
+  localStorage.setItem('session', JSON.stringify(dataStorage));
+  setValues();
+}
+
+if (localStorage.getItem('session')) setValues();
+else populateStorage();
+userEmail.onchange = populateStorage;
+userName.onchange = populateStorage;
+userMessage.onchange = populateStorage;
