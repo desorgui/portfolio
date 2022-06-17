@@ -1,6 +1,6 @@
 # My Portfolio
 
-> Web project to boost my presence on the web.
+> This project was implemented as part of my curriculum at microverse, This is a portfolio that I use to display my presence on the web. And allow people to have access to the different projects I worked on.
 
 ## Built With
 
