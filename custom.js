@@ -15,21 +15,21 @@ menuItems.forEach((el) => el.addEventListener('click', () => {
 
 const WorkData = [
   {
-    name: 'Multi Post Stories',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem  ',
-    image: './images/Img-Placeholder.png',
-    technologies: ['HTML', 'CSS'],
-    liveversion: 'https://desorgui.github.io',
-    source: 'https://github.com/desorgui',
+    name: 'My Portfolio Project',
+    description: 'This project was implemented as part of my curriculum at microverse, This is a portfolio that I use to display my presence on the web. And allow people to have access to the different projects I worked on.',
+    image: './images/portfolio.png',
+    technologies: ['HTML', 'CSS', 'Javascript'],
+    liveversion: 'https://desorgui.github.io/portfolio',
+    source: 'https://github.com/desorgui/portfolio',
   },
 
   {
-    name: 'Second Article Title',
+    name: 'To do list Project',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem  ',
-    image: './images/ImgPlaceholder.png',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    liveversion: 'https://desorgui.github.io',
-    source: 'https://github.com/desorgui',
+    image: './images/todolist.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
+    liveversion: 'https://desorgui.github.io/To-do-list/',
+    source: 'https://github.com/desorgui/To-do-list',
   },
   {
     name: 'Third Article Title',
