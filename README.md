@@ -1,10 +1,12 @@
 # My Portfolio
 
-> This project was done as part of my curriculum at microverse, it is a portfolio implementer to sell yourself on the internet. In this project we had to use a template preconceived on Figma for the graphical interface, then we had to use Javascript to allow this platform to interact. To create contents in a dynamic way as in the Works section, implement a popup when you click to see the project.
+> This project was done as part of my curriculum at microverse, it is a portfolio implementer to sell yourself on the internet. In this project we had to use a template preconceived on Figma for the graphical interface, then we had to use JavaScript to allow this platform to interact. To create contents in a dynamic way as in the Works section, implement a popup when you click to see the project.
 
 ## Built With
 
-- HTML & CSS
+- HTML
+- CSS
+- JavaScript
 
 ## Getting Started
 
