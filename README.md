@@ -42,7 +42,7 @@ Open The folder in your file explorer then, right click on index.html and open w
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/desorgui)
+- GitHub: [@DGuishny](https://github.com/desorgui)
 - Twitter: [@twitterhandle](https://twitter.com/DGuishny)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/guishny-desor-5421a01a9/)
 
